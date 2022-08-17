@@ -38,6 +38,10 @@ INSERT into mlb VALUES(30, "Colorado Rockies", "National","West", 23, 3);
 
 SELECT * FROM mlb;
 
+--lists bottom 10 teams
 SELECT team FROM mlb WHERE current_ranking<20;
 
+--listing the teams in the national league and the number of left hand pitchers sorted from least to most
 SELECT team, number_of_left_hand_pitchers FROM mlb WHERE league="National" ORDER BY number_of_left_hand_pitchers;
+
+--rankings and number of left hand pitchers is data from 8.16.22
