@@ -1,0 +1,43 @@
+CREATE TABLE mlb(id INTEGER PRIMARY KEY, team TEXT, league TEXT, sub TEXT, current_ranking INTEGER, number_of_left_hand_pitchers INTEGER);
+
+INSERT into mlb VALUES(1, "Chicago White Sox", "American", "Central", 16, 1);
+INSERT into mlb VALUES(2, "Cleveland Guardians", "American", "Central", 13, 1);
+INSERT into mlb VALUES(3, "Detroit Tigers", "American", "Central", 28, 4);
+INSERT into mlb VALUES(4, "Kansas City Royals", "American", "Central", 25, 3);
+INSERT into mlb VALUES(5, "Minnesota Twins", "American", "Central", 15, 1);
+
+INSERT into mlb VALUES(6, "New York Yankees", "American", "East", 4,4);
+INSERT into mlb VALUES(7, "Tampa Bay Rays", "American", "East", 10, 6);
+INSERT into mlb VALUES(8, "Toronto Blue Jays", "American", "East", 11, 1);
+INSERT into mlb VALUES(9, "Baltimore Orioles", "American", "East", 14, 2);
+INSERT into mlb VALUES(10, "Boston Red Sox", "American", "East", 18, 2);
+
+INSERT into mlb VALUES(11, "Houston Astros", "American", "West", 3, 2);
+INSERT into mlb VALUES(12, "Seattle Mariners", "American", "West", 9, 2);
+INSERT into mlb VALUES(13, "Texas Rangers", "American", "West", 20, 6);
+INSERT into mlb VALUES(14, "Los Angeles Angels", "American", "West", 22, 6);
+INSERT into mlb VALUES(15, "Oakland Athletics", "American", "West", 29, 6); 
+
+INSERT into mlb VALUES(16, "St. Louis Cardinals", "National", "Central", 7,4);
+INSERT into mlb VALUES(17, "Milwaukee Brewers", "National", "Central", 12, 5);
+INSERT into mlb VALUES(18, "Chicago Cubs", "National", "Central", 24,4);
+INSERT into mlb VALUES(19, "Cincinnati Reds", "National", "Central", 26, 4);
+INSERT into mlb VALUES(20, "Pittsburgh Pirates", "National", "Central", 27, 2);
+
+INSERT into mlb VALUES(21, "New York Mets", "National", "East", 2, 1);
+INSERT into mlb VALUES(22, "Atlanta Braves", "National", "East", 5, 3);
+INSERT into mlb VALUES(23, "Philadelphia Phillies", "National", "East", 6, 3);
+INSERT into mlb VALUES(24, "Miami Marlins", "National", "East", 21, 6);
+INSERT into mlb VALUES(25, "Washington Nationals", "National", "East", 30, 2);
+
+INSERT into mlb VALUES(26, "Los Angeles Dodgers", "National", "West", 1, 6);
+INSERT into mlb VALUES(27, "San Diego Padres", "National", "West", 8, 5);
+INSERT into mlb VALUES(28, "San Francisco Giants", "National", "West", 17, 5);
+INSERT into mlb VALUES(29, "Arizona Diamondbacks", "National", "West", 19, 4);
+INSERT into mlb VALUES(30, "Colorado Rockies", "National","West", 23, 3);
+
+SELECT * FROM mlb;
+
+SELECT team FROM mlb WHERE current_ranking<20;
+
+SELECT team, number_of_left_hand_pitchers FROM mlb WHERE league="National" ORDER BY number_of_left_hand_pitchers;
